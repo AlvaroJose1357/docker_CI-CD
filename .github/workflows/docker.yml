@@ -2,7 +2,7 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
@@ -14,7 +14,7 @@ jobs:
       - name: Build the Docker image
         uses: docker/login-action@v2
         with:
-          #me hace falta las credenciales
+          #me hace falta las credenciales de dockerhub y colocarlas en las variables
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build the Docker image
